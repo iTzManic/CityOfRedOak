@@ -6,6 +6,8 @@ import Image from 'next/image';
 import styles from './Header.module.css';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+
+// 1. IMPORT THE MARQUEE AND AN ICON
 import Marquee from "react-fast-marquee";
 import { FaInfoCircle } from "react-icons/fa";
 
@@ -28,11 +30,7 @@ export default function Header({ alertMessage, isDraftMode }: HeaderProps) {
 
   // --- Site URLs ---
   const address = "601 N 6th St, Red Oak, IA 51566";
-  
-  // **THIS IS THE FINAL FIX:**
-  // The domain is now 'http://googleusercontent.com/maps.google.com/7'
-  const mapsUrl = `https://maps.app.goo.gl/waG1aQoHUiedaakYA`;
-  
+  const mapsUrl = `http://googleusercontent.com/maps.google.com/8${encodeURIComponent(address)}`;
   const phoneUrl = "tel:712-623-6510";
   const paymentUrl = "https://redoakia.ourcommunityconnect.com/";
 
