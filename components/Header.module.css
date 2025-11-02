@@ -1,0 +1,190 @@
+/* =============================================
+ STYLES FOR THE DRAFT BANNER
+=============================================
+*/
+.draftBanner {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.draftBanner a {
+  color: #00bfff; /* A bright blue */
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+/* =============================================
+ STYLES FOR THE ALERT BANNER
+=============================================
+*/
+.alertBanner {
+  background-color: #111; /* High-contrast black */
+  color: #fff;
+  padding: 0.6rem 0; /* A little taller */
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* This ensures the marquee inside it is vertically centered */
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* This helps the marquee */
+}
+
+.alertIcon {
+  /* This adds spacing around the icon */
+  margin: 0 1.5rem;
+  /* This aligns the icon with the text */
+  position: relative;
+  top: 1px;
+  flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+/* --- Top Bar Styles --- */
+.topBar {
+  background-color: #E65100; 
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+.topBarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Add wrapping for small screens */
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topBar a {
+  color: inherit;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.topBar a:hover {
+  text-decoration: underline;
+}
+
+/* --- Main Nav Styles --- */
+.mainNav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.mainNavContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styles (updated for <Image>) */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* Prevents logo from shrinking on small screens */
+  flex-shrink: 0; 
+}
+.logo img {
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  /* Allow nav links to wrap on small screens */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* This ensures the links take up the available space and push the actions to the right */
+  flex-grow: 1; 
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  white-space: nowrap; /* Prevents "NEW RESIDENTS" from breaking */
+}
+
+.navLinks a:hover {
+  color: #E65100; 
+}
+
+/* STYLES FOR THE SEARCH BAR */
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 4px 0 0 4px; /* Round left corners */
+  border-right: none;
+  outline: none; /* Remove blue glow on focus */
+  transition: border-color 0.2s;
+  /* Allow input to shrink */
+  max-width: 120px;
+}
+
+.searchInput:focus {
+  border-color: #E65100; /* Highlight with theme color on focus */
+}
+
+.searchButton {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #E65100;
+  background-color: #E65100;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0; /* Round right corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchButton:hover {
+  background-color: #F57C00; /* Lighter orange on hover */
+  border-color: #F57C00;
+}
+
+/* =============================================
+⬇️ NEW STYLES FOR HEADER ACTIONS ⬇️
+=============================================
+*/
+
+/* This new div groups the search bar and payment button */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* This adds space between the search bar and the new button */
+  flex-shrink: 0; /* Prevents this group from shrinking */
+}
+
+/* This styles the new "Pay Bill" button */
+.paymentButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #E65100; /* Main theme color */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  white-space: nowrap; /* Prevents "Pay Bill" from breaking */
+}
+
+.paymentButton:hover {
+  background-color: #F57C00; /* Lighter orange on hover */
+}

@@ -1,0 +1,23 @@
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title span {
+  color: #E65100; /* Highlight the query with our theme color */
+}
+
+.results {
+  font-size: 1.1rem;
+  color: #555;
+}
