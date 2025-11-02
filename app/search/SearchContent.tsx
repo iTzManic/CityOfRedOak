@@ -1,10 +1,10 @@
-// This must be a client component to read the UR
+// This must be a client component to read the URL
 "use client";
 
 import { useSearchParams } from 'next/navigation';
 import styles from './page.module.css'; // We re-use the same styles
 
-export default function SearchContent() { //test
+export default function SearchContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q'); // 'q' is the parameter we set in Header.tsx
 
