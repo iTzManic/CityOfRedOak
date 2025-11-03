@@ -3,43 +3,43 @@ import React from 'react';
 import Header from '../components/Header'; 
 import Footer from '../components/Footer';
 
-// 1. IMPORT the necessary tools
-import { getAlertBanner } from '../sanity/lib/queries';
-import { SanityLive } from '../sanity/lib/live'; 
-import { draftMode } from 'next/headers';
-import { client } from '../sanity/lib/client';
+// --- SANITY FETCHING TEMPORARILY DISABLED FOR TESTING ---
+// import { getAlertBanner } from '../sanity/lib/queries';
+// import { SanityLive } from '../sanity/lib/live'; 
+// import { draftMode } from 'next/headers';
+// import { client } from '../sanity/lib/client';
+// --- END OF DISABLED CODE ---
 
 export const metadata = {
   title: 'City of Red Oak', // Updated title
   description: 'Official website for the City of Red Oak, Iowa',
 };
 
-// 2. MAKE THE LAYOUT AN ASYNC FUNCTION
-export default async function RootLayout({
+// --- REVERTED TO A SYNC FUNCTION FOR TESTING ---
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
 
-  // 3. FETCH THE DATA ON THE SERVER
-  const alertMessage = await getAlertBanner();
-  
-  // 4. CHECK if Draft Mode is enabled
-  const isDraftMode = (await draftMode()).isEnabled;
+  // --- HARD-CODED VALUES FOR TESTING ---
+  // We are not fetching anything, just passing 'null'
+  const alertMessage = null; 
+  const isDraftMode = false;
 
   return (
     <html lang="en">
       <body>
         
-        {/* 5. PASS the message AND draft mode status to the Header */}
+        {/* We pass the hard-coded values to the Header */}
         <Header alertMessage={alertMessage} isDraftMode={isDraftMode} />
         
         {children}
         
         <Footer />
         
-        {/* 6. ADD THE SanityLive COMPONENT */}
-        {isDraftMode && <SanityLive />}
+        {/* --- SANITY LIVE PREVIEW TEMPORARILY DISABLED --- */}
+        {/* {isDraftMode && <SanityLive />} */}
       </body>
     </html>
   );
